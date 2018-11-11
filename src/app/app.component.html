@@ -1,23 +1,16 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <button type="button" class="btn btn-primary">Primary</button>
-<button type="button" class="btn btn-secondary">Secondary</button>
-<button type="button" class="btn btn-success">Success</button>
-<button type="button" class="btn btn-danger">Danger</button>
-<button type="button" class="btn btn-warning">Warning</button>
-<button type="button" class="btn btn-info">Info</button>
-<button type="button" class="btn btn-light">Light</button>
-<button type="button" class="btn btn-dark">Dark</button>
+<div style="text-align:center" class="container">
+  
   <h1>
     Welcome to {{ title }}!
   </h1>
 
-  <div class="container">
-    <app-list-applicants></app-list-applicants>
+  <div class="container text-center">
+    <router-outlet></router-outlet>
   </div>
-  <div class="container col-lg-3">
-    <app-login></app-login>
-  </div>
+
+ 
+
+
 
 
 

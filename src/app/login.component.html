@@ -1,12 +1,15 @@
+<div class="container well">
 <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-  <div class="form-group">
+  <div class="form-group col-md-4">
       <label for="username">Username</label>
       <input id="username" formControlName="username" type="text" class="form-control" placeholder="Login Username"/>
   </div>
-  <div class="form-group">
+  <div class="form-group col-md-4">
     <label for="password">Password</label>
     <input id="password" formControlName="password" type="text" class="form-control" placeholder="Login Password"/>
   </div>
     <button class="btn btn-info">Login</button><br><br>
-    <button class="btn btn-warning">New User</button>
 </form>
+<button class="btn btn-warning">New User</button>
+</div>
+
