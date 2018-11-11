@@ -4,7 +4,7 @@ For example, in windows, after running git clone, run: "cd ArcTrade_FrontEnd" , 
 
 
 
-# ArcTrade
+## ArcTrade
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.3.
 
