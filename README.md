@@ -1,3 +1,9 @@
+#Install using npm
+Run "npm install" to re-build "node_modules"
+For example, in windows, after git clone: "cd ArcTrade_FrontEnd" , "npm install" , "npm start"
+
+
+
 # ArcTrade
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.3.
