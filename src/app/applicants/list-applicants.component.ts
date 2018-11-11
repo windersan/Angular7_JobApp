@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Applicant } from '../models/application.model';
+import { ApplicationService } from './application.service';
 
 @Component({
   selector: 'app-list-applicants',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListApplicantsComponent implements OnInit {
 
-  constructor() { }
+  applicants: Applicant[];
+
+  constructor(private _applicationService: ApplicationService) { }
 
   ngOnInit() {
+    this.applicants = this._applicationService.getApplicants();
   }
 
 }

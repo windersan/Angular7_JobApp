@@ -1,3 +1,40 @@
-<p>
-  list-applicants works!
-</p>
+<div class="panel panel-primary" *ngFor="let applicant of applicants">
+  <div class="panel-heading">
+    <h3 class="panel-title">{{applicant.firstName}} {{applicant.lastName}}</h3>
+  </div>
+  <div class="panel-body">
+    <div class="col-xs-10">
+      <div class="row">
+        <div class="col-xs-4">
+          {{applicant.job}}
+        </div>
+        <div class="col-xs-8">
+          <div class="row">
+            <div class="col-xs-6">
+              {{applicant.address}}
+            </div>
+            <div class="col-xs-6">
+              (RESUME)
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-6">
+              {{applicant.city}}, {{applicant.state}} {{applicant.zip}}
+            </div>
+            <div class="col-xs-6">
+              (status)
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-6">
+              {{applicant.gender}}
+            </div>
+            <div class="col-xs-6">
+              {{applicant.dateApplied | date}}
+            </div>
+          </div>
+        </div>       
+      </div>
+    </div>
+  </div>
+</div>
