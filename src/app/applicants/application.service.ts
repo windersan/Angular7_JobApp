@@ -31,7 +31,7 @@ export class ApplicationService {
   constructor(private httpClient: HttpClient) { }
 
   getApplicants(): Observable<Applicant[]>{
-    return this.httpClient.get<Applicant[]>('http://localhost:1337/api/manage/1');
+    return this.httpClient.get<Applicant[]>('http://localhost:1337/api/manage/');
   }
 
 
