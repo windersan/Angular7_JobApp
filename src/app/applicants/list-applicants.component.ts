@@ -14,7 +14,7 @@ export class ListApplicantsComponent implements OnInit {
   constructor(private _applicationService: ApplicationService) { }
 
   ngOnInit() {
-    this.applicants = this._applicationService.getApplicants();
+    this._applicationService.getApplicants().subscribe(x => this.applicants = x);
   }
 
 }
