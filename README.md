@@ -1,4 +1,4 @@
-#Install using npm
+# Install using npm
 Run "npm install" to re-build "node_modules"
 For example, in windows, after git clone: "cd ArcTrade_FrontEnd" , "npm install" , "npm start"
 
