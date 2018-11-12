@@ -10,13 +10,16 @@ import { ListApplicantsComponent } from './applicants/list-applicants.component'
 import { AppRoutingModule } from './app-routing.module';
 import { CreateApplicantComponent } from './applicants/create-applicant.component';
 import { LoginComponent } from './login.component';
+import { UploaderComponent } from './uploader/uploader.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     ListApplicantsComponent,
     CreateApplicantComponent,
-    LoginComponent
+    LoginComponent,
+    UploaderComponent
   ],
   imports: [
     BrowserModule,

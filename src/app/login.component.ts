@@ -34,13 +34,12 @@ export class LoginComponent implements OnInit {
       {
         this.user = x;
         if(x.authorization == 2)this._router.navigate(['list']);
-        if(x.authorization == 1)this._router.navigate(['list']);///
+        if(x.authorization == 1)this._router.navigate(['list']);///['applicant/<returnObjectid>']
       }, 
       (error: any) => console.log(error), ()=> console.log('o.0')
     );
-     // console.log(this.user.authorization);
-  // if(this.user.authorization == 2) this._router.navigate(['list']);
-   //else if returnObject.authorization==1, this._router.navigate(['applicant/<returnObjectid>'])
+    
+   
   }
 
 }
