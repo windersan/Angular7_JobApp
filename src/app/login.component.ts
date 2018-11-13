@@ -39,7 +39,7 @@ export class LoginComponent implements OnInit {
       {
         this.user = x;
         if(x.authorization == 2)this._router.navigate(['list']);
-        if(x.authorization == 1)this._router.navigate(['list']);///['applicant/<returnObjectid>']
+        if(x.authorization == 1)this._router.navigate(['applicant',this.user.id]);///['applicant/<returnObjectid>']
       }, 
       (error: any) => console.log(error), ()=> console.log('o.0')
     );

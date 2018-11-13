@@ -4,16 +4,19 @@ import {
   HttpRequest, HttpResponse, HttpErrorResponse
 } from '@angular/common/http';
 
-import { of } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { catchError, last, map, tap } from 'rxjs/operators';
+import { ResumeId } from '../models/resumeId.model'; 
 
 
 @Injectable()
 export class UploaderService {
+
   constructor(
     private http: HttpClient,
-) {}
+  ) {}
 
+  continue = false;
 
   upload(file: File) {
     if (!file) { return; }
@@ -45,6 +48,7 @@ export class UploaderService {
 
       case HttpEventType.Response:
         return `File "${file.name}" was completely uploaded!`;
+      
 
       default:
         return `File "${file.name}" surprising upload event: ${event.type}.`;
@@ -75,5 +79,15 @@ export class UploaderService {
    
     console.log(message);
   }
+
+  getLast():  Observable<ResumeId>{
+    console.log('UploaderService.getLast() called');
+     var g = this.http.get<ResumeId>('http://localhost:1337/api/files/');
+      console.log(g);
+     return g;
+  }
+
+
+
 }
 

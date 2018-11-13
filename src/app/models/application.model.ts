@@ -12,4 +12,5 @@
      city: string;
      state: string;
      zip: number;
+     applicationStatus: string;
  }

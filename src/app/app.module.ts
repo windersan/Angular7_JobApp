@@ -12,6 +12,7 @@ import { CreateApplicantComponent } from './applicants/create-applicant.componen
 import { LoginComponent } from './login.component';
 import { UploaderComponent } from './uploader/uploader.component';
 import { CreateUserComponent } from './create-user/create-user.component';
+import { ApplicantComponent } from './applicants/applicant/applicant.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { CreateUserComponent } from './create-user/create-user.component';
     CreateApplicantComponent,
     LoginComponent,
     UploaderComponent,
-    CreateUserComponent
+    CreateUserComponent,
+    ApplicantComponent
   ],
   imports: [
     BrowserModule,
