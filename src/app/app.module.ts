@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { CreateApplicantComponent } from './applicants/create-applicant.component';
 import { LoginComponent } from './login.component';
 import { UploaderComponent } from './uploader/uploader.component';
+import { CreateUserComponent } from './create-user/create-user.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { UploaderComponent } from './uploader/uploader.component';
     ListApplicantsComponent,
     CreateApplicantComponent,
     LoginComponent,
-    UploaderComponent
+    UploaderComponent,
+    CreateUserComponent
   ],
   imports: [
     BrowserModule,

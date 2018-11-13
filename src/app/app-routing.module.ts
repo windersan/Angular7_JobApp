@@ -8,7 +8,7 @@ import { CreateApplicantComponent } from './applicants/create-applicant.componen
 const appRoutes: Routes = [
   { path: 'list', component: ListApplicantsComponent },
   { path: 'login', component: LoginComponent},
-  { path: 'create', component: LoginComponent},
+  { path: 'newuser', component: LoginComponent},
   { path: '', redirectTo: '/login', pathMatch: 'full'}
 ];
 
