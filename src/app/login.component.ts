@@ -26,6 +26,11 @@ export class LoginComponent implements OnInit {
     });
   }
 
+  newUser(): void {
+    this._router.navigate(['newuser']);
+    return;
+  }
+
   onSubmit(): void {
 
     console.log(this.loginForm.value);

@@ -3,7 +3,7 @@ import { UserService } from './user.service';
 import { FormGroup, FormControl } from '@angular/forms';
 import { User } from '../models/user.model'; 
 import { UserId } from '../models/userId.model'; 
-import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { Router, ActivatedRoute, ParamMap, NavigationExtras } from '@angular/router';
 
 
 @Component({
@@ -34,7 +34,7 @@ export class CreateUserComponent implements OnInit {
 
   constructor(
     private _userService: UserService,
-    private _router: Router,
+    private _router: Router
   ) { }
 
   ngOnInit() {
@@ -57,7 +57,9 @@ export class CreateUserComponent implements OnInit {
       {
         console.log(data);
         this.userId = data;
-       // this._router.navigate(['list']);
+
+        
+        this._router.navigate(['newapplicant', data.id]);
         
       }, 
       (error: any) => console.log(error), ()=> console.log('o.0')

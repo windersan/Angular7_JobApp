@@ -16,8 +16,8 @@ export class ApplicationService {
   }
 
   postApplication(applicant: Applicant): Observable<Applicant>{
-    console.log('AuthService called');
-     return this.httpClient.post<Applicant>('http://localhost:1337/api/auth', applicant, {
+    console.log('ApplicationService called');
+     return this.httpClient.post<Applicant>('http://localhost:1337/api/applications', applicant, {
       headers: new HttpHeaders({
         'Content-Type': 'application/json'
       })
