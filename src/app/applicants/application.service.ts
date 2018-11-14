@@ -15,6 +15,11 @@ export class ApplicationService {
     return this.httpClient.get<Applicant[]>('http://localhost:1337/api/manage/');
   }
 
+   getApplicant(id: number): Observable<Applicant>{
+     console.log('ApplicationService called');
+    return this.httpClient.get<Applicant>('http://localhost:1337/api/applications/' + id);
+  }
+
   postApplication(applicant: Applicant): Observable<Applicant>{
     console.log('ApplicationService called');
      return this.httpClient.post<Applicant>('http://localhost:1337/api/applications', applicant, {

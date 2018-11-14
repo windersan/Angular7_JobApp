@@ -1,3 +1,47 @@
-<p>
-  applicant works!
-</p>
+<div class="panel panel-primary" >
+  <div class="panel-heading">
+    <h3 class="panel-title">{{applicant.firstName}} {{applicant.lastName}}</h3>
+  </div>
+  <div class="panel-body">
+    <div class="col-xs-10 well">
+      <div class="row">
+        <div class="col-xs-4">
+          JOB:
+        </div>
+        <div class="col-xs-8">
+          <div class="row">
+            <div class="col-xs-4">
+              DATE APPLIED:
+            </div>
+            <div class="col-xs-4">
+              REQUESTED SALARY:
+            </div>
+            <div class="col-xs-4">        
+            </div>
+          </div>
+        </div>       
+      </div>
+      <div class="row">
+        <div class="col-xs-4">
+          {{applicant.job}}
+        </div>
+        <div class="col-xs-8">
+          <div class="row">
+            <div class="col-xs-4">
+              {{applicant.dateApplied | date}}
+            </div>
+            <div class="col-xs-4">
+              {{applicant.salary}}
+            </div>
+            <div class="col-xs-4">
+              (RESUME)
+            </div>
+          </div>
+        </div>       
+      </div>
+    </div>
+    <div class="col-xs-2 well" style="background-color: #008080; font-weight:bold">
+      {{applicant.applicationStatus}}
+    </div>
+  </div>
+</div>

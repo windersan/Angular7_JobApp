@@ -13,7 +13,7 @@ import { ResumeId } from '../models/resumeId.model';
 export class UploaderService {
 
   constructor(
-    private http: HttpClient,
+    private http: HttpClient
   ) {}
 
   continue = false;
