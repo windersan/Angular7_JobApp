@@ -41,7 +41,13 @@ export class CreateApplicantComponent implements OnInit {
     console.log('found: ' + this.applicant.userId);
     this.applicantForm = new FormGroup({
       firstName: new FormControl(),
-      lastName: new FormControl()
+      lastName: new FormControl(),
+      job: new FormControl(),
+      salary: new FormControl(),
+      address: new FormControl(),
+      city: new FormControl(),
+      state: new FormControl(),
+      zip: new FormControl()
     });
   }
 
@@ -51,6 +57,12 @@ export class CreateApplicantComponent implements OnInit {
 
     this.applicant.firstName = this.applicantForm.value.firstName;
     this.applicant.lastName = this.applicantForm.value.lastName;
+    this.applicant.job = this.applicantForm.value.job;
+    this.applicant.salary = this.applicantForm.value.salary;
+    this.applicant.address = this.applicantForm.value.address;
+    this.applicant.city = this.applicantForm.value.city;
+    this.applicant.state = this.applicantForm.value.state;
+    this.applicant.zip = this.applicantForm.value.zip;
     
     
 

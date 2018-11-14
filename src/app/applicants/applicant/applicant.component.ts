@@ -12,6 +12,8 @@ import { ApplicationService } from '../application.service';
 })
 export class ApplicantComponent implements OnInit {
 
+  link: string = "http://localhost:1337/api/files/";
+
    applicant: Applicant = 
   {
     "id": 0,
@@ -39,9 +41,16 @@ export class ApplicantComponent implements OnInit {
 
   ngOnInit() {
     this.applicant.userId = +this._route.snapshot.params['id'];
-    
-    this._applicationService.getApplicant(this.applicant.userId).subscribe(x => this.applicant = x);
-  
+
+    this._applicationService.getApplicant(this.applicant.userId).subscribe(x => {
+      this.applicant = x;});
+
+    this.link = this.link + this.applicant.resumeId;
+    console.log(this.link);
+  }
+
+  clickResume(){
+
   }
 
 }
