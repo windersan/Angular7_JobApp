@@ -12,8 +12,10 @@ export class UploaderComponent {
   continue = false;
   message: string;
   last: ResumeId;
+  userid = 0 ;
 
   constructor(
+    private _route: ActivatedRoute,
     private uploaderService: UploaderService,
     private _router: Router
   ) {}
@@ -30,7 +32,11 @@ export class UploaderComponent {
             this.uploaderService.getLast().subscribe(
               x => {
                 this.last = x;
-                console.log("last: " + this.last.id);
+                console.log("last: " + this.last.id + ' ' + this.userid);
+                this.uploaderService.update(this.last,this.userid).subscribe(
+                   () => this ,
+                    (error: any) => { console.log(error); }
+                )
               }
             );
           }
@@ -44,6 +50,9 @@ export class UploaderComponent {
   }
 
   ngOnInit() {
+    console.log(this._route.snapshot.params);
+    this.userid = +this._route.snapshot.params['id'];
+    console.log("ngonit->userid->" + this.userid);
   }
 
 }

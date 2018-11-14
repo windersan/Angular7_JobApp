@@ -59,7 +59,7 @@ export class CreateApplicantComponent implements OnInit {
         console.log(data);
         //this.userId = data;
         
-        this._router.navigate(['upload', this.applicant.id]);
+        this._router.navigate(['upload', this.applicant.userId]);
         
       }, 
       (error: any) => console.log(error), ()=> console.log('o.0')

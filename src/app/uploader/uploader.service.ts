@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {
   HttpClient, HttpEvent, HttpEventType, HttpProgressEvent,
-  HttpRequest, HttpResponse, HttpErrorResponse
+  HttpRequest, HttpResponse, HttpErrorResponse, HttpHeaders
 } from '@angular/common/http';
 
 import { Observable, of } from 'rxjs';
@@ -85,6 +85,18 @@ export class UploaderService {
      var g = this.http.get<ResumeId>('http://localhost:1337/api/files/');
       console.log(g);
      return g;
+  }
+
+  update(resumeId: ResumeId, userid: number):  Observable<void>{
+    console.log('UploaderService.getLast() called');
+     var str = 'http://localhost:1337/api/applications/' + userid;
+     return this.http.put<void>(str,resumeId,{
+       headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      })
+     });
+      
+     
   }
 
 
