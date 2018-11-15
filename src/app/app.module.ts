@@ -13,6 +13,8 @@ import { LoginComponent } from './login.component';
 import { UploaderComponent } from './uploader/uploader.component';
 import { CreateUserComponent } from './create-user/create-user.component';
 import { ApplicantComponent } from './applicants/applicant/applicant.component';
+import { JobFilterPipe } from "src/app/models/job-filter.pipe";
+import { StatusFilterPipe } from "src/app/models/status-filter.pipe";
 
 
 @NgModule({
@@ -23,7 +25,9 @@ import { ApplicantComponent } from './applicants/applicant/applicant.component';
     LoginComponent,
     UploaderComponent,
     CreateUserComponent,
-    ApplicantComponent
+    ApplicantComponent,
+    JobFilterPipe,
+    StatusFilterPipe
   ],
   imports: [
     BrowserModule,

@@ -31,7 +31,7 @@
               {{applicant.dateApplied | date}}
             </div>
             <div class="col-xs-4">
-              {{applicant.salary}}
+              {{applicant.salary | currency:'USD'}}
             </div>
             <div class="col-xs-4">
               <a href="http://localhost:1337/api/files/{{applicant.resumeId}}">RESUME</a>
