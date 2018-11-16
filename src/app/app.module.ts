@@ -15,6 +15,7 @@ import { CreateUserComponent } from './create-user/create-user.component';
 import { ApplicantComponent } from './applicants/applicant/applicant.component';
 import { JobFilterPipe } from "src/app/models/job-filter.pipe";
 import { StatusFilterPipe } from "src/app/models/status-filter.pipe";
+import {TestOneComponent } from "./test-one.component";
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { StatusFilterPipe } from "src/app/models/status-filter.pipe";
     CreateUserComponent,
     ApplicantComponent,
     JobFilterPipe,
-    StatusFilterPipe
+    StatusFilterPipe,
+    TestOneComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,5 @@
+<button class="like-button btn-success" [ngClass]="{
+  'btn-success': !isClicked}"
+  (click)="clickLike()">
+    Like | <span>{{numLikes}} </span>
+</button>
