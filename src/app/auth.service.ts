@@ -25,7 +25,7 @@ export class AuthService {
 
   authenticate(login: Login): Observable<User>{
     console.log('AuthService called');
-     return this.httpClient.post<User>('http://localhost:1337/api/auth', login, {
+     return this.httpClient.post<User>('http://arctrade.azurewebsites.net/api/auth', login, {
       headers: new HttpHeaders({
         'Content-Type': 'application/json'
       })

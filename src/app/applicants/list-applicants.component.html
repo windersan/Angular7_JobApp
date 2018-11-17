@@ -6,8 +6,9 @@
     <input type="text" class="form-control" placeholder="Search by status"
     style="width:300px" [(ngModel)]="statusSearch"/>
 </div>
+<div class="well">JOB APPLICATIONS</div>
 <div class="panel panel-primary" 
-  *ngFor="let applicant of filteredApplicants">
+  *ngFor="let applicant of filteredApplicants; index as i">
   <div class="panel-heading">
     <h3 class="panel-title">{{applicant.firstName}} {{applicant.lastName}}</h3>
   </div>
@@ -21,7 +22,7 @@
             {{applicant.address}}
         </div>
         <div class="col-xs-4">
-            <a href="http://localhost:1337/api/files/{{applicant.resumeId}}">RESUME</a>
+            <a href="http://arctrade.azurewebsites.net/api/files/{{applicant.resumeId}}">RESUME</a>
         </div>
       </div>
       <div class="row">
@@ -36,8 +37,31 @@
         </div>      
       </div>
     </div>
-    <div class="col-xs-2 well" style="background-color: #008080; font-weight:bold">
+
+    <form [formGroup]="statusForm" (ngSubmit)="update(i)">
+    <div class="col-xs-2 well form-group" style="background-color: #00ACC1;font-weight:bold">
+      <label for="status" style="font-weight:normal">
+        Application Status:
+      </label>
       {{applicant.applicationStatus}}
+      <select id="status" name="status" formControlName="status" class="form-control" 
+        style="background-color: #FFD600; font-weight:bold">
+        <option value="New" style="font-weight:bold">New</option>
+        <option value="Reviewing" style="font-weight:bold">Reviewing</option>
+        <option value="Interview scheduled" style="font-weight:bold">Interview scheduled</option>
+        <option value="Phone intereviewed" style="font-weight:bold">Phone interviewed</option>
+        <option value="Offer extended" style="font-weight:bold">Offer extended</option>
+        <option value="Hired" style="font-weight:bold">Hired</option>
+        <option value="Rejected" style="font-weight:bold">Rejected</option>
+      </select>
+      <button class = "btn" style="background-color:#00E5FF">Update</button>
     </div>
+    </form>
   </div>
 </div>
+
+
+
+
+
+
